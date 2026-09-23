@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff1f5">
+<title>Kikil♥ve</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand">Kikil<span>♥</span>ve</div>
+    <button class="settings" id="openAdmin" aria-label="Administration">☰</button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="tagline">Plus qu'un simple match…</div>
+    </section>
+
+    <section class="card-wrap">
+      <article class="profile-card" id="profileCard">
+        <div class="photo-wrap">
+          <img id="profilePhoto" alt="Photo du profil">
+          <div class="counter" id="counter">1 / 1</div>
+        </div>
+        <div class="profile-info">
+          <div class="name-row">
+            <h1 id="profileName">Kiki, 24</h1>
+            <span class="verified">✓</span>
+          </div>
+          <div class="location" id="profileLocation">♡ Vendée, France</div>
+          <p class="bio" id="profileBio"></p>
+          <div class="tags" id="profileTags"></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="actions">
+      <button class="action next" id="nextBtn" aria-label="Profil suivant">➜</button>
+      <button class="action like" id="likeBtn" aria-label="Match">♥</button>
+    </section>
+    <div class="hint"><span>Profil suivant</span><span>J'aime ce profil</span></div>
+  </main>
+
+  <div id="gift" class="gift hidden"><span>🎁</span><b>1</b></div>
+
+  <div class="modal hidden" id="matchModal">
+    <div class="modal-card">
+      <button class="close" id="closeMatch">×</button>
+      <div class="mini-heart">♥</div>
+      <h2>It's a Match !</h2>
+      <p>Tu as fait battre mon cœur ♥</p>
+      <button class="continue" id="continueBtn">Continuer →</button>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="giftModal">
+    <div class="modal-card gift-card">
+      <button class="close" id="closeGift">×</button>
+      <div class="gift-icon">🎁</div>
+      <h2>Une petite surprise ♡</h2>
+      <p>Reste connectée pour découvrir encore plus…</p>
+      <a id="instaLink" class="social" target="_blank" rel="noopener">📸 <span>Mon Instagram</span> <b>›</b></a>
+      <a id="snapLink" class="social" target="_blank" rel="noopener">👻 <span>Mon Snapchat</span> <b>›</b></a>
+    </div>
+  </div>
+
+  <div class="admin hidden" id="admin">
+    <div class="admin-panel">
+      <div class="admin-head">
+        <h2>Kikil♥ve — Admin</h2><button id="closeAdmin">×</button>
+      </div>
+      <p class="admin-note">Démo locale : les modifications sont enregistrées sur cet appareil.</p>
+      <div id="adminProfiles"></div>
+      <button class="add" id="addProfile">+ Ajouter un profil</button>
+      <hr>
+      <label>Instagram<input id="adminInsta" placeholder="https://instagram.com/..."></label>
+      <label>Snapchat<input id="adminSnap" placeholder="https://snapchat.com/..."></label>
+      <button class="save" id="saveSettings">Enregistrer</button>
+      <button class="reset" id="resetDemo">Réinitialiser la démo</button>
+    </div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
